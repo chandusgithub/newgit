@@ -1,0 +1,51 @@
+<template>
+    <lightning-card title="Quiz App">
+        <div class=" slds-m-around_medium">
+            <strong>Here quiz will come</strong>
+
+        </div>
+        <form>
+<template for:each={quizQuestions} for:item="quizq">
+<div key={quizq.id} class="slds-m-bottom_medium">
+    <div>{quizq.id} )
+       <strong>{quizq.question}</strong>
+    </div>
+    <div class="slds-grid slds-gutters slds-m-bottom_medium">
+        <div class="slds-col">
+            <input type="radio" name={quizq.id} value="a" onchange={changeHandler}/>
+         {quizq.answers.a}
+        </div>
+        <div class="slds-col">
+            <input type="radio" name={quizq.id} value="b" onchange={changeHandler}/>
+            {quizq.answers.b}
+        </div>
+        <div class="slds-col">
+            <input type="radio" name={quizq.id} value="a" onchange={changeHandler}/>
+         {quizq.answers.c}
+        </div>
+      </div>
+</div>
+</template>
+<lightning-button 
+variant="brand"
+type="submit"
+label="submit"
+title="submit quiz"
+class="slds-m-around_small"
+disabled={allNotSelected}
+onclick={submitHandler}>
+
+</lightning-button>
+<lightning-button 
+variant="brand"
+type="reset"
+label="Reset"
+title="reset quiz"
+class="slds-m-around_small"
+onclick={resetHandler}>
+
+</lightning-button>
+</form>
+    </lightning-card>
+    
+</template>
