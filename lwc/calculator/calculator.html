@@ -1,0 +1,18 @@
+<template>
+    <lightning-card title = " calculator practice">
+    <div>
+    <lightning-input label =" enter number1 " name="num1" onchange={handleChangenum1}> </lightning-input>
+    <lightning-input name=" num2" label ="enter number2" onchange={handleChangenum2}></lightning-input>
+</div>
+<div>
+    <lightning-input label ="Result" value={resultValue}></lightning-input>
+</div>
+<div>
+    <lightning-button label="sum" onclick={handleClickSum}></lightning-button>
+    <lightning-button label="sub" onclick={handleClickSub}></lightning-button>
+    <lightning-button label="mul" onclick={handleClickMul}></lightning-button>
+    <lightning-button label="div" onclick={handleClickDiv}></lightning-button>
+</div>
+    
+</lightning-card>
+</template>
