@@ -1,0 +1,20 @@
+<template>
+<lightning-card title="table">
+    <lightning-spinner if:true={isLoading} alternative-text="Loading"  size="medium">
+    </lightning-spinner>
+    <div slot ="header">
+        <h3 >
+            <lightning-icon icon-name="utility:connected_apps" size="small"></lightning-icon>
+            Extend the Functionality of Lightning Datatable
+        </h3>
+    </div>
+        <div slot="footer">
+        
+            <lightning-badge label="PickList"></lightning-badge>
+            <lightning-badge label="Lookup"></lightning-badge>
+            <lightning-badge label="FileUpload"></lightning-badge>
+            <lightning-badge label="Image"></lightning-badge>
+    </div>
+    
+</lightning-card>
+</template>
